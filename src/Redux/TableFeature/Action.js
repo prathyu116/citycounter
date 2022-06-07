@@ -1,6 +1,7 @@
 export const ADD_DATA = "ADD_DATA";
 export const DELETE_DATA = "DELETE_TODO";
 export const EDIT_DATA = "EDIT_DATA";
+export const SORT = "SORT";
 
 export const addData = (data) => {
   return {
@@ -24,5 +25,12 @@ export const editData = (id,data) => {
     type: EDIT_DATA,
     id,
     data
+  };
+  
+};
+export const sort = (by) => {
+  return {
+    type: SORT,
+    payload: by,
   };
 };
